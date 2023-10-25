@@ -52,18 +52,18 @@ Dependencies:
    sudo gitlab-ctl restart
    ```
 
-4. Access GitLab in your browser at http://192.168.56.9/gitlab/ and create a user with a password (minimum 8 characters).
+4. Access GitLab in your browser at http://192.168.56.9/gitlab/ and create a user with a password (minimum 8 characters). (12345678)
 
 5. Create a second user in GitLab:
    - Visit http://192.168.56.9/gitlab/users/sign_in
    - Enter the following details:
-     - Username: ProjectOwner
-     - Email: projectowner@company.com
-     - Password: projectowner
+     - Username: dev
+     - Email: mld_dev@job.com
+     - Password: 12345678
 
-6. If you need to reset a GitLab user's password, follow the instructions [here](https://docs.gitlab.com/ee/security/reset_root_password.html).
+If you need to reset a GitLab user's password, follow the instructions [here](https://docs.gitlab.com/ee/security/reset_root_password.html).
 
-7. Use the root account to approve user registrations:
+6. Use the root account to approve user registrations:
    - Go to http://192.168.56.9/gitlab/admin/users?filter=blocked_pending_approval
    - Logout.
 
