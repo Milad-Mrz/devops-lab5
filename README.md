@@ -2,6 +2,7 @@
 Dependencies:
    - ansible 4.0.0
    - Python 3.10
+   - Gitlab-runner 14.3.2
 
      
 **Step A: Create the Integration Server**
