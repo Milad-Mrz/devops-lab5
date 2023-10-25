@@ -106,10 +106,9 @@ If you need to reset a GitLab user's password, follow the instructions [here](ht
 
 4. Configure Git globally with your user name and email:
    ```shell
-   git config --global user.name "Project Owner"
-   git config --global user.email "projectowner@company.com"
+   git config --global user.name "dev"
+   git config --global user.email "mld_dev@job.com"
    ```
-
 5. Ensure the `pom.xml` file is in the root of the local repository.
 
 6. Create a `.gitignore` file to exclude logs, dev settings, and binaries:
