@@ -132,7 +132,7 @@ If you need to reset a GitLab user's password, follow the instructions [here](ht
 7. Initialize the Git repository, add the remote origin, commit, and push the project:
    ```shell
    git init
-   git remote add origin http://192.168.56.9/gitlab/ProjectOwner/mavenhelloworldproject.git
+   git remote add origin http://192.168.56.9/gitlab/dev/mavenhelloworldproject.git
    git add .
    git commit -m "Initial commit"
    git push -u origin master
@@ -155,7 +155,7 @@ If you need to reset a GitLab user's password, follow the instructions [here](ht
    sudo apt-get install gitlab-runner
    ```
 
-4. Get the runner token for the project at http://192.168.56.9/gitlab/ProjectOwner/mavenhelloworldproject/-/settings/ci_cd.
+4. Get the runner token for the project at http://192.168.56.9/gitlab/dev/mavenhelloworldproject/-/settings/ci_cd.
 
 5. Register the runner:
    ```shell
@@ -169,7 +169,7 @@ If you need to reset a GitLab user's password, follow the instructions [here](ht
    sudo gitlab-runner restart
    ```
 
-7. Change the runner configuration to accept jobs without tags at http://192.168.56.9/gitlab/ProjectOwner/mavenhelloworldproject/runners/1/edit.
+7. Change the runner configuration to accept jobs without tags at http://192.168.56.9/gitlab/dev/mavenhelloworldproject/runners/1/edit.
 
 **Step F: Create GitLab CI**
 1. Exit the Vagrant session:
@@ -225,7 +225,7 @@ If you need to reset a GitLab user's password, follow the instructions [here](ht
    git push -u origin master
    ```
 
-5. Inspect the CI/CD pipelines at http://192.168.56.9/gitlab/ProjectOwner/mavenhelloworldproject/-/pipelines.
+5. Inspect the CI/CD pipelines at http://192.168.56.9/gitlab/dev/mavenhelloworldproject/-/pipelines.
 
 
 **Step G: Storing the "Binary"**
@@ -263,6 +263,6 @@ If you need to reset a GitLab user's password, follow the instructions [here](ht
    ```
 
 
-3. Inspect the CI/CD pipelines at http://192.168.56.9/gitlab/ProjectOwner/mavenhelloworldproject/-/pipelines.
+3. Inspect the CI/CD pipelines at http://192.168.56.9/gitlab/dev/mavenhelloworldproject/-/pipelines.
 
 These organized and concise instructions guide you through setting up an automated build process using GitLab, Docker, and GitLab Runner.
