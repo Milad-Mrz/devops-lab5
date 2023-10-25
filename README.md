@@ -8,6 +8,9 @@
 
 2. Create the missing data folder:
    ```shell
+   mkdir ../../data
+   
+   # or 
    sudo rm -R ../../data && mkdir ../../data
    ```
 
@@ -15,6 +18,7 @@
    ```shell
    vagrant up
    ```
+**note:** check Vagrantfile content and fix IP 192.168.33.9 >> 192.168.56.9
 
 **Step B: Configure GitLab**
 1. Connect to the integration server:
@@ -29,7 +33,7 @@
 
    - Replace `external_url http://hostname` with:
      ```
-     external_url 'http://192.168.33.9/gitlab'
+     external_url 'http://192.168.56.9/gitlab'
      ```
 
    - Replace `# unicorn['port'] = 8080` with:
@@ -44,10 +48,10 @@
    sudo gitlab-ctl restart
    ```
 
-4. Access GitLab in your browser at http://192.168.33.9/gitlab/ and create a user with a password (minimum 8 characters).
+4. Access GitLab in your browser at http://192.168.56.9/gitlab/ and create a user with a password (minimum 8 characters).
 
 5. Create a second user in GitLab:
-   - Visit http://192.168.33.9/gitlab/users/sign_in
+   - Visit http://192.168.56.9/gitlab/users/sign_in
    - Enter the following details:
      - Username: ProjectOwner
      - Email: projectowner@company.com
@@ -56,7 +60,7 @@
 6. If you need to reset a GitLab user's password, follow the instructions [here](https://docs.gitlab.com/ee/security/reset_root_password.html).
 
 7. Use the root account to approve user registrations:
-   - Go to http://192.168.33.9/gitlab/admin/users?filter=blocked_pending_approval
+   - Go to http://192.168.56.9/gitlab/admin/users?filter=blocked_pending_approval
    - Logout.
 
 **Step C: Configure Docker**
@@ -97,7 +101,7 @@
    cd ~/devops-master/pipeline/s1-create-skeleton/MavenHelloWorldProject
    ```
 
-3. Login to GitLab using the non-root account and create a project at http://192.168.33.9/gitlab/projects/new#blank_project.
+3. Login to GitLab using the non-root account and create a project at http://192.168.56.9/gitlab/projects/new#blank_project.
 
 4. Configure Git globally with your user name and email:
    ```shell
@@ -128,7 +132,7 @@
 7. Initialize the Git repository, add the remote origin, commit, and push the project:
    ```shell
    git init
-   git remote add origin http://192.168.33.9/gitlab/ProjectOwner/mavenhelloworldproject.git
+   git remote add origin http://192.168.56.9/gitlab/ProjectOwner/mavenhelloworldproject.git
    git add .
    git commit -m "Initial commit"
    git push -u origin master
@@ -151,7 +155,7 @@
    sudo apt-get install gitlab-runner
    ```
 
-4. Get the runner token for the project at http://192.168.33.9/gitlab/ProjectOwner/mavenhelloworldproject/-/settings/ci_cd.
+4. Get the runner token for the project at http://192.168.56.9/gitlab/ProjectOwner/mavenhelloworldproject/-/settings/ci_cd.
 
 5. Register the runner:
    ```shell
@@ -165,7 +169,7 @@
    sudo gitlab-runner restart
    ```
 
-7. Change the runner configuration to accept jobs without tags at http://192.168.33.9/gitlab/ProjectOwner/mavenhelloworldproject/runners/1/edit.
+7. Change the runner configuration to accept jobs without tags at http://192.168.56.9/gitlab/ProjectOwner/mavenhelloworldproject/runners/1/edit.
 
 **Step F: Create GitLab CI**
 1. Exit the Vagrant session:
@@ -221,7 +225,7 @@
    git push -u origin master
    ```
 
-5. Inspect the CI/CD pipelines at http://192.168.33.9/gitlab/ProjectOwner/mavenhelloworldproject/-/pipelines.
+5. Inspect the CI/CD pipelines at http://192.168.56.9/gitlab/ProjectOwner/mavenhelloworldproject/-/pipelines.
 
 
 **Step G: Storing the "Binary"**
@@ -259,6 +263,6 @@
    ```
 
 
-3. Inspect the CI/CD pipelines at http://192.168.33.9/gitlab/ProjectOwner/mavenhelloworldproject/-/pipelines.
+3. Inspect the CI/CD pipelines at http://192.168.56.9/gitlab/ProjectOwner/mavenhelloworldproject/-/pipelines.
 
 These organized and concise instructions guide you through setting up an automated build process using GitLab, Docker, and GitLab Runner.
