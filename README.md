@@ -1,5 +1,7 @@
 **Lab 5 - Integration Server Setup**
-
+Dependencies:
+   - ansible 4.0.0
+   - Python 3.10
 **Step A: Create the Integration Server**
 1. Navigate to the working directory:
    ```shell
