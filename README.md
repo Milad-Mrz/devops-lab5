@@ -225,6 +225,7 @@ Certainly, you can update the directory path as requested. Here's a revised vers
 
 5. Inspect the CI/CD pipelines at http://192.168.33.9/gitlab/ProjectOwner/mavenhelloworldproject/-/pipelines.
 
+
 **Step G: Storing the "Binary"**
 1. Modify the `.gitlab-ci.yml` file to include a deploy stage:
    ```shell
@@ -243,4 +244,22 @@ Certainly, you can update the directory path as requested. Here's a revised vers
    deploy_app:
      stage: deploy
      script:
-       -
+       - echo "Deploy review app"
+     artifacts:
+       name: "my-app"
+       paths:
+         - target/*.jar
+  
+
+ ```
+
+2. Push the changes to GitLab:
+   ```shell
+   git add .
+   git commit -m "Added deploy step to GitLab pipeline"
+   git push -u origin master
+   ```
+
+3. Inspect the CI/CD pipelines at http://192.168.33.9/gitlab/ProjectOwner/mavenhelloworldproject/-/pipelines.
+
+These organized and concise instructions guide you through setting up an automated build process using GitLab, Docker, and GitLab Runner.
