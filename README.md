@@ -227,6 +227,7 @@ Certainly, you can update the directory path as requested. Here's a revised vers
 
 
 **Step G: Storing the "Binary"**
+
 1. Modify the `.gitlab-ci.yml` file to include a deploy stage:
    ```shell
    nano .gitlab-ci.yml
@@ -249,9 +250,8 @@ Certainly, you can update the directory path as requested. Here's a revised vers
        name: "my-app"
        paths:
          - target/*.jar
-  
+    ```
 
- ```
 
 2. Push the changes to GitLab:
    ```shell
@@ -259,6 +259,7 @@ Certainly, you can update the directory path as requested. Here's a revised vers
    git commit -m "Added deploy step to GitLab pipeline"
    git push -u origin master
    ```
+
 
 3. Inspect the CI/CD pipelines at http://192.168.33.9/gitlab/ProjectOwner/mavenhelloworldproject/-/pipelines.
 
