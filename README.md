@@ -152,7 +152,8 @@ If you need to reset a GitLab user's password, follow the instructions [here](ht
 3. Install GitLab Runner:
    ```shell
    curl -L https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.deb.sh | sudo bash
-   sudo apt-get install gitlab-runner
+   sudo apt-get install gitlab-runner=14.3.2
+   
    ```
 
 4. Get the runner token for the project at http://192.168.56.9/gitlab/dev/mavenhelloworldproject/-/settings/ci_cd.
