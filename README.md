@@ -1,5 +1,3 @@
-Certainly, you can update the directory path as requested. Here's a revised version of the instructions, and I'll provide a Markdown-ready version for your README.md on GitHub:
-
 **Lab 5 - Integration Server Setup**
 
 **Step A: Create the Integration Server**
