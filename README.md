@@ -249,7 +249,7 @@ If you need to reset a GitLab user's password, follow the instructions [here](ht
    nano .gitlab-ci.yml
    ```
 
-   Update the stages and add a deploy stage with artifact storage:
+   Add - deploy to "stages" as below, and add a "deploy_app" with stage with artifact storage:
 
    ```yaml
    stages:
