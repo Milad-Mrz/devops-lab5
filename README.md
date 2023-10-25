@@ -65,7 +65,7 @@ If you need to reset a GitLab user's password, follow the instructions [here](ht
 
 6. Use the root account to approve user registrations:
    - Go to http://192.168.56.9/gitlab/admin/users?filter=blocked_pending_approval
-   - Logout.
+   - Logout of gitlab but not vagrant
 
 **Step C: Configure Docker**
 1. Add the current user to the docker group to access the CLI:
