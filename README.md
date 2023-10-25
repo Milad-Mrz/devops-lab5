@@ -84,14 +84,11 @@ If you need to reset a GitLab user's password, follow the instructions [here](ht
    ```
 
 3. Remove the Docker container and image:
-   - To remove the container:
+   - To remove the container & the image:
      ```shell
      docker rm hello-world
-     ```
-
-   - To remove the image:
-     ```shell
      docker rmi hello-world
+     
      ```
 
 **Step D: Use GitLab as VCS**
