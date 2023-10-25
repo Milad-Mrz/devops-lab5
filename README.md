@@ -163,12 +163,19 @@ If you need to reset a GitLab user's password, follow the instructions [here](ht
    ```
 
    Follow the prompts and use the provided token. Specify the runner description, tags, executor, and Docker image.
-   ﻿﻿﻿1.GitLab instance URL enter: 	http://192.168.33.9/gitlab/
-   2.Enter the token generated 	use previously generated
-   ﻿﻿﻿3.Enter for the description: 	docker
-   ﻿﻿﻿4.Enter the gitlab-ci tag: 	integration
-   ﻿﻿﻿5.Enter the executor: 		docker
-   6.﻿﻿﻿For the docker image enter: 	alpine:latest
+
+   
+   1. GitLab instance URL enter: 	http://192.168.56.9/gitlab/
+   
+   2. Enter the token generated 	use previously generated
+   
+   3. Enter for the description: 	docker
+   
+   4. Enter the gitlab-ci tag: 	integration
+   
+   5. Enter the executor: 		docker
+
+   6. ﻿﻿﻿For the docker image enter: 	alpine:latest
 
    
 7. Restart the runner:
