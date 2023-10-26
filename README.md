@@ -2,6 +2,8 @@
 Dependencies:
    - ansible 4.0.0
    - Python 3.10
+   - docker 19.03
+   - gitlab-ce 13.2
    - Gitlab-runner 14.3.2
 
      
