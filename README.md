@@ -156,6 +156,7 @@ If you need to reset a GitLab user's password, follow the instructions [here](ht
    ```shell
    sudo curl -L --output /usr/local/bin/gitlab-runner https://gitlab-runner-downloads.s3.amazonaws.com/v14.3.2/binaries/gitlab-runner-linux-amd64
    sudo chmod +x /usr/local/bin/gitlab-runner
+   sudo gitlab-runner install -u gitlab-runner
    gitlab-runner --version   
    ```
 
