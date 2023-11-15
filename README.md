@@ -1,6 +1,6 @@
 **Lab 5 - Integration Server Setup**
 Dependencies:
-   - ansible 4.0.0
+   - ansible 2.9.1
    - Python 3.10
    - docker 19.03
    - gitlab-ce 13.2
